@@ -109,10 +109,10 @@ The database includes the four required accounts with pre-configured permissions
 
 | Role | Email | Password |
 |------|-------|----------|
-| **Admin** | `admin@test.com` | `Test@1234` |
-| **Kitchen** | `kitchen@test.com` | `Test@1234` |
-| **Dispatch** | `dispatch@test.com` | `Test@1234` |
-| **Driver** | `driver@test.com` | `Test@1234` |
+| **Admin** | `admin@test.com` | `*****` |
+| **Kitchen** | `kitchen@test.com` | `*****` |
+| **Dispatch** | `dispatch@test.com` | `*****` |
+| **Driver** | `driver@test.com` | `*****` |
 
 ---
 
@@ -362,10 +362,10 @@ All test accounts use the standard password specified in the assignment:
 
 | Role | Email | Password |
 |------|-------|----------|
-| **Admin** | `admin@test.com` | `Test@1234` |
-| **Kitchen** | `kitchen@test.com` | `Test@1234` |
-| **Dispatch** | `dispatch@test.com` | `Test@1234` |
-| **Driver** | `driver@test.com` | `Test@1234` |
+| **Admin** | `admin@test.com` | `*****` |
+| **Kitchen** | `kitchen@test.com` | `*****` |
+| **Dispatch** | `dispatch@test.com` | `*****` |
+| **Driver** | `driver@test.com` | `*****` |
 
 ---
 
@@ -374,7 +374,7 @@ All test accounts use the standard password specified in the assignment:
 To review the complete operational workflow from end to end:
 
 1. **Login as Admin:**
-   - Navigate to `http://localhost:3000/login` and log in with `admin@test.com` / `Test@1234`.
+   - Navigate to `http://localhost:3000/login` and log in with `admin@test.com` / `*****`.
    - Review the **Dashboard** metrics (Total Orders, Active Kitchen Units, Pending Drops, Revenue).
 2. **Create & Place a Multi-Item Order:**
    - Go to **Orders** → **New Order** (`/orders/create`).
@@ -386,23 +386,23 @@ To review the complete operational workflow from end to end:
    - Click **Run Cutoff** on the Orders page or Dashboard.
    - Observe that the placed order transitions to `CONFIRMED`.
 4. **Kitchen Production (KDS):**
-   - Log out and log in as `kitchen@test.com` / `Test@1234`.
+   - Log out and log in as `kitchen@test.com` / `*****`.
    - Navigate to `/kitchen`.
    - Filter by kitchen stations (*Grill & Tandoor*, *Cold & Salad Station*).
    - Click **Start Prep** (`STARTED`) and **Mark Done** (`DONE`) on the prep units.
 5. **Dispatch Management:**
-   - Log out and log in as `dispatch@test.com` / `Test@1234`.
+   - Log out and log in as `dispatch@test.com` / `*****`.
    - Navigate to `/dispatch`.
    - Review the auto-grouped drop for Acme Tech Corp.
    - Click **Assign Driver** and select `Primary Fleet Driver (driver@test.com)`.
    - Click **Mark Dispatch Ready**, then click **Dispatch Drop** to move to `OUT_FOR_DELIVERY`.
 6. **Driver Portal:**
-   - Log out and log in as `driver@test.com` / `Test@1234`.
+   - Log out and log in as `driver@test.com` / `*****`.
    - Navigate to `/driver`.
    - View assigned drops for today, delivery instructions, and company addresses.
    - Click **Mark Delivered**, enter a confirmation note (e.g., "Handed over to front desk"), and confirm delivery.
 7. **Billing & Invoices:**
-   - Log back in as `admin@test.com` / `Test@1234`.
+   - Log back in as `admin@test.com` / `*****`.
    - Navigate to `/billing`.
    - Select the delivered order and click **Generate Invoice**.
    - Review the generated invoice with exact total in paise.
