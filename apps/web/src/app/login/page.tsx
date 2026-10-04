@@ -180,7 +180,7 @@ export default function LoginPage() {
               </button>
             </div>
             <p className="text-[10px] text-slate-500 mt-2 text-center">
-              Password for all seeded users: <span className="font-mono text-slate-400">Test@1234</span>
+              Password for all seeded users: <span className="font-mono text-slate-400">*****</span>
             </p>
           </div>
         </div>
