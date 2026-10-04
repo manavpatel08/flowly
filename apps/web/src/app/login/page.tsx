@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/auth-context';
 import { AlertBanner } from '@/components/ui/AlertBanner';
-import { Loader2, Lock, Mail, ShieldCheck, Sparkles } from 'lucide-react';
+import { Loader2, Lock, Mail } from 'lucide-react';
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -42,11 +42,6 @@ export default function LoginPage() {
     }
   };
 
-  const handleQuickFill = (demoEmail: string) => {
-    setEmail(demoEmail);
-    setPassword('Test@1234');
-    setError(null);
-  };
 
   return (
     <div className="min-h-screen bg-slate-950 flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -137,52 +132,7 @@ export default function LoginPage() {
             </div>
           </form>
 
-          {/* Quick Fill Demo Roles */}
-          <div className="mt-6 pt-6 border-t border-slate-800">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-3 flex items-center justify-between">
-              <span>Demo Quick-Fill</span>
-              <span className="text-[10px] text-emerald-400 font-normal">
-                1-Click Select
-              </span>
-            </p>
-            <div className="grid grid-cols-2 gap-2 text-xs">
-              <button
-                type="button"
-                onClick={() => handleQuickFill('admin@test.com')}
-                className="px-2.5 py-1.5 rounded-lg bg-slate-950 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:border-slate-700 font-medium transition text-left flex items-center space-x-1.5"
-              >
-                <span className="w-2 h-2 rounded-full bg-purple-400" />
-                <span>Admin</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleQuickFill('kitchen@test.com')}
-                className="px-2.5 py-1.5 rounded-lg bg-slate-950 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:border-slate-700 font-medium transition text-left flex items-center space-x-1.5"
-              >
-                <span className="w-2 h-2 rounded-full bg-amber-400" />
-                <span>Kitchen</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleQuickFill('dispatch@test.com')}
-                className="px-2.5 py-1.5 rounded-lg bg-slate-950 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:border-slate-700 font-medium transition text-left flex items-center space-x-1.5"
-              >
-                <span className="w-2 h-2 rounded-full bg-blue-400" />
-                <span>Dispatch</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleQuickFill('driver@test.com')}
-                className="px-2.5 py-1.5 rounded-lg bg-slate-950 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:border-slate-700 font-medium transition text-left flex items-center space-x-1.5"
-              >
-                <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                <span>Driver</span>
-              </button>
-            </div>
-            <p className="text-[10px] text-slate-500 mt-2 text-center">
-              Password for all seeded users: <span className="font-mono text-slate-400">*****</span>
-            </p>
-          </div>
+
         </div>
       </div>
     </div>
